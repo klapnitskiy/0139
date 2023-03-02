@@ -1,0 +1,261 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --primary-color: #fff;
+  --secondary-color: #f2f2f2;
+  --offer-color: #fffbc8;
+  --review-color: #f2fbff;
+  --button-color: #fdd639;
+  --services-top: #b1e19b;
+  --services-other: #ace2f8;
+  --text-secondary: #808080;
+  --text-primary: #333333;
+}
+
+body {
+  font-family: "Arial";
+  font-size: 1.6rem;
+  color: var(--text-primary);
+  background-color: #d4d4d4;
+}
+
+button {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.container-user {
+  padding: 2.5rem;
+  background-color: #fff;
+}
+
+.container-form {
+  background-color: var(--secondary-color);
+  padding: 2.8rem 2.5rem 3.4rem;
+}
+
+.user {
+  display: flex;
+  flex-direction: column;
+}
+
+.user__name-wrap {
+  padding: 0.6rem;
+}
+
+.user__info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.user__photo {
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.user__name {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.user__position {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+}
+
+.user__offer {
+  position: relative;
+  background-color: var(--offer-color);
+  padding: 0.6rem;
+  border-color: #dadada;
+  border-style: solid;
+  border-width: 1px 1px 1px 0;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.user__offer::before {
+  position: absolute;
+  display: block;
+  content: "";
+  top: -0.1rem;
+  bottom: -0.1rem;
+  width: 20%;
+  right: 100%;
+  background-color: inherit;
+  border-width: 1px 0 1px 0;
+  border-color: #dadada;
+  border-style: inherit;
+}
+
+.user__services {
+  max-width: 31.7rem;
+  width: 100%;
+  align-self: flex-end;
+  margin-bottom: 2rem;
+}
+
+.user__services-title {
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-align: right;
+}
+
+.user__services-total {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.user__services-units {
+  padding: 1.6rem 0 1.6rem;
+  margin: 1.6rem 0;
+  border-width: 1px 0 1px 0;
+  border-color: #dadada;
+  border-style: solid;
+}
+
+.user__services-unit {
+  padding: 0.6rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.reviews__header,
+.reviews__header-left,
+.reviews__header-right {
+  display: flex;
+}
+
+.reviews__header-left {
+  gap: 0.8rem;
+}
+
+.reviews__header-right {
+  gap: 1.6rem;
+}
+
+.reviews__header-left,
+.reviews__header-right {
+  align-items: center;
+}
+
+.reviews__header {
+  justify-content: space-between;
+}
+
+.reviews__header-likes::before {
+  content: url(./img/like.svg);
+}
+
+.reviews__header-comments::before {
+  content: url(./img/comment.svg);
+}
+
+.reviews__header-likes::before,
+.reviews__header-comments::before {
+  margin-right: 0.5rem;
+}
+
+.reviews__item {
+  width: 100%;
+  margin-top: 1.3rem;
+}
+
+.reviews__item-header {
+  margin-bottom: 2rem;
+}
+
+.reviews__item-username {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.reviews__item-time {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+.reviews__item-text {
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  padding: 2rem;
+  border: 1px solid #c4cbcf;
+  background-color: var(--review-color);
+}
+
+.reviews__item-text:before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 25px;
+  height: 20px;
+  bottom: 100%;
+  left: 20px;
+  box-sizing: border-box;
+  clip-path: polygon(0% 0%, 38.45% 56.43%, 68.13% 100%, 0% 100%);
+  background-color: var(--review-color);
+}
+.reviews__item-text:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 25px;
+  height: 20px;
+  bottom: 100%;
+  left: 20px;
+  box-sizing: border-box;
+  clip-path: polygon(
+    0% -5%,
+    69.84% 100%,
+    63.89% 100%,
+    5.73% 11.87%,
+    6.73% 100.93%,
+    0% 100%
+  );
+  background-color: #c4cbcf;
+}
+
+.form {
+  text-align: center;
+}
+
+.form__input {
+  resize: none;
+  border: 1px solid black;
+  min-height: 6.3rem;
+  width: 100%;
+  margin-bottom: 2.3rem;
+}
+
+.form__submit {
+  border: none;
+  background-color: var(--button-color);
+  color: inherit;
+  font-size: 1.6rem;
+  font-weight: 700;
+  padding: 1.3rem 0;
+  max-width: 28rem;
+  width: 100%;
+  border-radius: 2.3rem;
+}

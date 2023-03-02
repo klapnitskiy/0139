@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="fonts.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./app.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container container-user">
+      <section class="user">
+        <div class="user__info">
+          <img
+            src="./img/avatar.jpg"
+            alt="user profile photo"
+            class="user__photo"
+          />
+          <div class="user__description">
+            <div class="user__name-wrap">
+              <p class="user__name">Eva Jonson</p>
+              <small class="user__position">Sales Manager</small>
+            </div>
+            <p class="user__offer">
+              I will find the best offers for you. My services are absolutely
+              free.
+            </p>
+          </div>
+        </div>
+        <div class="user__services">
+          <header class="user__services-title">Services</header>
+          <ul class="user__services-units">
+            <li class="user__services-unit">
+              Manual tour booking <strong>11</strong>
+            </li>
+            <li class="user__services-unit">
+              Package tours <strong>3</strong>
+            </li>
+            <li class="user__services-unit">Hotels <strong>1</strong></li>
+          </ul>
+          <p class="user__services-total">Total <span>15</span></p>
+        </div>
+      </section>
+      <section class="reviews">
+        <header class="reviews__header">
+          <div class="reviews__header-left">
+            <h2 class="reviews__header-title">Latest reviews</h2>
+            <a class="reviews__header-link" href="#">All reviews</a>
+          </div>
+          <div class="reviews__header-right">
+            <span class="reviews__header-likes">131</span>
+            <span class="reviews__header-comments">14</span>
+          </div>
+        </header>
+        <ul class="reviews__list"></ul>
+      </section>
+    </div>
+    <div class="container container-form">
+      <form class="form">
+        <textarea class="form__input" name="" id=""></textarea>
+        <button class="form__submit" type="button">Send a message</button>
+      </form>
+    </div>
+  </body>
+</html>

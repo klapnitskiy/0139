@@ -1,0 +1,22 @@
+{
+  "comments": [
+    {
+      "id": 1,
+      "username": "Samuel Jackson",
+      "date": "13 Apr 2022",
+      "body": "Hey Eva! You're cool. Nice pic!"
+    },
+    {
+      "id": 2,
+      "username": "Angela Deimon",
+      "date": "10 Apr 2022",
+      "body": "Thanks for your services! We really liked the ocean view room. We hope to cooperate in the near future. We are sure you will do everything to make our next holiday fantastic."
+    },
+    {
+      "id": 3,
+      "username": "Ronald Harris",
+      "date": "8 Apr 2022",
+      "body": "Eva, hello! There is such a question: How can I contact you if I am abroad in roaming?"
+    }
+  ]
+}
