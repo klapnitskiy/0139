@@ -3,7 +3,7 @@ const URL = `http://localhost:3000/comments`;
 const commentsContainer = document.querySelector(".reviews__list");
 const submitButton = document.querySelector(".form__submit");
 const textArea = document.querySelector(".form__input");
-
+const form = document.querySelector(".form");
 const getComments = async function (url, settings = {}) {
   try {
     const response = await fetch(url, settings);
@@ -49,8 +49,9 @@ const showComments = async function () {
 };
 
 const addComment = async function (event) {
-  event.preventDefault();
-  console.log(event);
+  // if (event.type == "click") {
+  //   event.preventDefault();
+  // }
   if (!textArea.value) return;
 
   const settings = {
@@ -81,5 +82,9 @@ const addComment = async function (event) {
 };
 
 submitButton.addEventListener("click", addComment);
+
+form.addEventListener("keypress", (e) => {
+  if (e.ctrlKey && (e.keyCode === 13 || e.keyCode === 10)) addComment();
+});
 
 showComments();
